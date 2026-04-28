@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{% block title %}My Booking Site{% endblock %}</title>
+
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar-custom">
+
+    <!-- Logo -->
+    <div class="logo">
+        <a href="/">MySite</a>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div>
+
+        {% if request.user.is_authenticated %}
+
+            <span style="margin-right:15px;">
+                👋 {{ request.user.username }}
+            </span>
+
+            <a href="/dashboard/" style="margin-right:15px;">Dashboard</a>
+            <a href="/income/" style="margin-right:15px;">Income</a>
+            <a href="/expense/" style="margin-right:15px;">Expense</a>
+            <a href="/loan/" style="margin-right:15px;">Loan</a>
+            <a href="/todo/" style="margin-right:15px;">Todo</a>
+            <a href="/category/add/" class="mr-3">Category</a>
+
+            <a href="/logout/">Logout</a>
+
+        {% else %}
+
+            <a href="/login/" style="margin-right:15px;">Login</a>
+            <a href="/register/">Register</a>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+{% block content %}
+<!-- Default content (optional) -->
+<br>
+<br>
+<br>
+<br>
+
+<section class="hero">
+    <h1>Welcome to Income & Expenses With Todo</h1>
+    <p>You can check your day to day income and expance and rutin</p>
+</section>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+
+<br>
+
+
+{% endblock %}
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+
+        <div>
+            <h3>MySite</h3>
+            <p>Simple booking system built with Django.</p>
+        </div>
+
+        <div class="footer-links">
+            <h5>Links</h5>
+            <a href="#">Home</a>
+        </div>
+
+        <div class="footer-links">
+            <h5>Contact</h5>
+            <p>Email: info@example.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 MySite
+    </div>
+</footer>
+
+</body>
+</html>

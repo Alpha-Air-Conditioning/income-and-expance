@@ -1,0 +1,169 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f7fb;
+    color: #2c3e50;
+}
+
+/* NAVBAR */
+.navbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    margin: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+.navbar-custom a {
+    color: #444;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar-custom a:hover {
+    color: #4f46e5;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #777;
+}
+
+/* CARD */
+.card {
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* TABLE */
+.table {
+    background: #fff;
+}
+
+.table thead {
+    background: #f1f3f9;
+}
+
+.table tbody tr:hover {
+    background: #f9fafc;
+}
+
+/* FORM */
+input, select, textarea {
+    border-radius: 8px !important;
+    border: 1px solid #ddd !important;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* BUTTONS */
+.btn {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 500;
+}
+
+/* BUTTON COLORS */
+.btn-success {
+    background: #22c55e;
+    border: none;
+}
+
+.btn-danger {
+    background: #ef4444;
+    border: none;
+}
+
+.btn-info {
+    background: #3b82f6;
+    border: none;
+}
+
+.btn-primary {
+    background: #4f46e5;
+    border: none;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* DASHBOARD CARDS */
+.dashboard-card {
+    padding: 25px;
+    text-align: center;
+}
+
+.dashboard-card h6 {
+    color: #888;
+}
+
+.dashboard-card h2 {
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 60px;
+    background: #1e293b;
+    color: white;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.footer-links a {
+    color: #ccc;
+    display: block;
+    margin-top: 8px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #4f46e5;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}

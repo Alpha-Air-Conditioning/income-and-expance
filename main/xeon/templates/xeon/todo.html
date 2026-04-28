@@ -1,0 +1,52 @@
+{% extends 'xeon/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between mb-3">
+        <h2>Todo List</h2>
+        <a href="/todo/add/" class="btn btn-primary">+ Add Task</a>
+    </div>
+
+    <div class="card shadow-sm">
+        <table class="table table-striped mb-0">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Title</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for todo in todos %}
+                <tr>
+                    <td>{{ todo.title }}</td>
+                    <td>{{ todo.priority }}</td>
+                    <td>
+                        {% if todo.is_completed %}
+                            <span class="badge badge-success">Done</span>
+                        {% else %}
+                            <span class="badge badge-warning">Pending</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ todo.due_date }}</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-info">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5" class="text-center">No tasks found</td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}
